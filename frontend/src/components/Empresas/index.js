@@ -22,17 +22,17 @@ const ComponenteEmpresas = ({ data }) => {
     <>
       <Box>
         <Title>empresas cadastradas</Title>
-        <Row>
-          <InputSection>
-            <Label>busque por descricao</Label>
-            <Input
-              id="search"
-              name="search"
-              placeholder="buscar empresas.."
-              onKeyDown={(e) => handleSubmit(e)}
-            />
-          </InputSection>
-        </Row>
+        {/*<Row>*/}
+          {/*<InputSection>*/}
+          {/*  <Label>busque por descricao</Label>*/}
+          {/*  <Input*/}
+          {/*    id="search"*/}
+          {/*    name="search"*/}
+          {/*    placeholder="buscar empresas.."*/}
+          {/*    onKeyDown={(e) => handleSubmit(e)}*/}
+          {/*  />*/}
+          {/*</InputSection>*/}
+        {/*</Row>*/}
         {data.length > 0 ? (
           <>
             {data.map((item, itemIndex) => (

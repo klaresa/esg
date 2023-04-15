@@ -9,10 +9,7 @@ export const Box = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 40px;
-`;
-export const Headline = styled.div`
-  font-size: 18px;
+  font-size: 48px;
 `;
 
 export const RowSection = styled.div`
@@ -23,11 +20,6 @@ export const RowSection = styled.div`
   background-color: #fafafa;
   padding: 8px;
   font-size: 14px;
-    
-  &:hover {
-    box-shadow: 5px 5px 5px #d7d5d5;
-    transition: 800ms;
-  }
 `;
 
 export const Row = styled.div`

@@ -15,32 +15,14 @@ import { useNavigate } from "react-router-dom";
 const ComponenteDocumentos = ({ data }) => {
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
-    if (e.code === "Enter") {
-      console.log("code", e.code);
-    }
-  }
-
   function handleDetailsClick(item) {
-    // console.log('itemmm', item);
     navigate(`details/${item._id}`, { state: item });
   }
 
   return data && (
     <>
       <Box>
-        <Title>documentos cadastrados</Title>
-        {/*<Row>*/}
-        {/*  <InputSection>*/}
-        {/*    <Label>Busca vagas...</Label>*/}
-        {/*    <Input*/}
-        {/*      id="search"*/}
-        {/*      name="search"*/}
-        {/*      placeholder="search.."*/}
-        {/*      onKeyDown={(e) => handleSubmit(e)}*/}
-        {/*    />*/}
-        {/*  </InputSection>*/}
-        {/*</Row>*/}
+        <Title>documentos cadastrados * empresas para responder</Title>
 
         {data.map((item, itemIndex) => (
           <RowSection
@@ -54,22 +36,6 @@ const ComponenteDocumentos = ({ data }) => {
             </Row>
             <Row>
               {<p>{item.description}</p>}
-            </Row>
-
-            <Row>
-              {/*{Object.keys(item.content).map((key) => (*/}
-              {/*    <div key={key}>*/}
-              {/*      <p>{key}</p>*/}
-              {/*      <p> {item.content[key]}</p>*/}
-              {/*  </div>*/}
-              {/*))}*/}
-
-              {/*{item.content.map((quesion, index) => (*/}
-              {/*    <div key={index}>*/}
-              {/*      <p>- {quesion.question}</p>*/}
-              {/*      <p>{quesion.answer}</p>*/}
-              {/*    </div>*/}
-              {/*))}*/}
             </Row>
           </RowSection>
         ))}

@@ -20,7 +20,6 @@ export const useLogin = async(user, pass) => {
       localStorage.setItem("token", request.data?.access_token);
     }
 
-    // navigate('/vagas/all');
   } catch (err) {
     console.error(err);
   }

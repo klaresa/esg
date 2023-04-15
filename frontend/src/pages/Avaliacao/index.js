@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getApiData } from "../../services/getApiAvaliacaoData";
 import ComponenteAvaliacao from "../../components/Avaliacao";
-import {
-  Box,
-} from "./styles";
-
 
 const Avaliacao = () => {
-  const [search, setSearch] = useState([]);
 
   const [data, setData] = useState([]);
 

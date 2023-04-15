@@ -1,6 +1,6 @@
-import api from "../config/api";
+import api from "../config/documentosAPI";
 
-export async function getApiEmpresasData(url) {
+export async function getApiDocumentosData(url) {
   const token = localStorage.getItem("token");
   const parse = JSON.parse(token);
   console.log("APIDATAREQUEST", parse);

@@ -27,6 +27,7 @@ export const NavBar = () => {
       "paths": [
         {"path": "/empresa/", "description": "home"},
         {"path": "/empresa/perfil", "description": "perfil"},
+        {"path": "/empresa/documentos", "description": "documentos"},
         {"path": "/empresa/avaliacao", "description": "avaliações"},
       ],
     },

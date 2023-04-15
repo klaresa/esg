@@ -24,8 +24,9 @@ export const RowSection = styled.div`
   padding: 8px;
   font-size: 14px;
   
-  cursor: pointer;
   
+  cursor: pointer;
+    
   &:hover {
     box-shadow: 5px 5px 5px #d7d5d5;
     transition: 800ms;
