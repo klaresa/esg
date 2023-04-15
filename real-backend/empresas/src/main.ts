@@ -1,13 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-// import { HttpExceptionFilter } from './candidatos/http-exception.filter';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { ValidationPipe } from '@nestjs/common';
 import * as session from 'express-session';
 import * as passport from 'passport';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
-  // app.useGlobalFilters(new HttpExceptionFilter());
+
   app.enableCors({
     origin: '*',
     methods: ['POST', 'PUT', 'DELETE', 'GET']
@@ -24,6 +24,16 @@ async function bootstrap() {
 
   app.use(passport.initialize());
   app.use(passport.session())
+
+  const config = new DocumentBuilder()
+      .setTitle('empresas')
+      .setDescription('Descricao da API de empresas')
+      .setVersion('1.0')
+      .addTag('empresas')
+      .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
 
   await app.listen(3333);
 }

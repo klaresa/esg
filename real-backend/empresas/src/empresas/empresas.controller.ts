@@ -39,7 +39,7 @@ export class EmpresasController {
 
     console.log('newuser', newUser);
 
-    // retornar o user criado e cadastrar o candidato com o userID
+    // retornar o user criado e cadastrar a empresa com o userID
     // na pior das hipoteses usar o username p achar
     return await this.empresasService.create({
       userId: newUser._id,

@@ -7,7 +7,7 @@ import { Avaliacao, AvaliacaoSchema } from './schemas/avaliacao.schema';
 import { AvaliacaoRepository } from "./app.repository";
 import { EmpresaService } from "./empresa/empresa.service";
 import { DocumentoService } from "./documento/documento.service";
-import {AvaliacaoService} from "./documento/avaliacao.service";
+// import {AvaliacaoService} from "./documento/avaliacao.service";
 
 @Module({
   imports: [
@@ -20,6 +20,6 @@ import {AvaliacaoService} from "./documento/avaliacao.service";
     }]),
   ],
   controllers: [AppController],
-  providers: [AppService, AvaliacaoRepository, EmpresaService, DocumentoService, AvaliacaoService],
+  providers: [AppService, AvaliacaoRepository, EmpresaService, DocumentoService],
 })
 export class AppModule {}
